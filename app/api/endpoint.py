@@ -6,6 +6,11 @@ import requests
 from .errors import bad_request
 
 
+@api.get("/test")
+def test():
+    return "hello world"
+
+
 @api.get("/")
 def get_owned_games():
     data = request.get_json() or {}
