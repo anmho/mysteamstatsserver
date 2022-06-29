@@ -1,0 +1,3 @@
+import os
+# STEAM_API_KEY = "76561198184167726"
+STEAM_API_KEY = os.environ.get("STEAM_API_KEY")

@@ -1,4 +1,5 @@
 from . import api
+import os
 from .config import STEAM_API_KEY
 from flask import jsonify
 from flask import request
@@ -11,7 +12,7 @@ def test():
     return "hello world"
 
 
-@api.get("/")
+@api.get("/get-owned-games")
 def get_owned_games():
     data = request.get_json() or {}
 
