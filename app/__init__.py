@@ -8,6 +8,11 @@ def create_app():
     # app.config.from_pyfile("config.py")
     app.register_blueprint(api, url_prefix="/api")
 
+    app.get("/", methods=["GET"])
+
+    def home():
+        return "Hello"
+
     # Bind packages to Flask app
     cors = CORS()
     cors.init_app(app=app, origins=["*"])
